@@ -989,10 +989,7 @@ pre .javascript .function {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  width: 24px;
-}
-.back-to-top span {
-  display: none;
+  width: initial;
 }
 .back-to-top:hover {
   color: #fc6423;
@@ -1306,7 +1303,7 @@ pre .javascript .function {
   height: 1px;
   margin: 80px auto 60px;
   text-align: center;
-  width: 8%;
+  width: 18%;
 }
 .post:last-child .post-eof {
   display: none;
@@ -1714,7 +1711,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2490ff;
+  background: #ff4509;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1957,8 +1954,11 @@ pre .javascript .function {
 .footer-inner {
   text-align: center;
 }
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
+}
 .with-love {
-  color: #808080;
+  color: #ff0000;
   display: inline-block;
   margin: 0 5px;
 }

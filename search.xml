@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A83-%E6%9C%88%E9%9A%90%2F</url>
-    <content type="text"><![CDATA[文 | 涵若生 日约黄昏后月 无心拉朵流云遮头 半隐娇羞 你好 无双]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A82-%E9%94%99%E5%A4%B1%2F</url>
-    <content type="text"><![CDATA[文 | 涵若生 夏日的早晨你若起晚只会错失清凉 迈入烤箱 早安 无双]]></content>
-  </entry>
-  <entry>
-    <title></title>
+    <title><![CDATA[去留]]></title>
     <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A81-%E5%8E%BB%E7%95%99%2F</url>
     <content type="text"><![CDATA[文 | 涵若生 去也罢，留也罢，何侍一地繁华？天无涯，地无涯，何处不安家？]]></content>
+      <tags>
+        <tag>诗文</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[错失]]></title>
+    <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A82-%E9%94%99%E5%A4%B1%2F</url>
+    <content type="text"><![CDATA[文 | 涵若生 夏日的早晨你若起晚只会错失清凉 迈入烤箱 早安 无双]]></content>
+      <tags>
+        <tag>诗文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MarkDown使用积累]]></title>
+    <url>%2F2019%2F08%2F25%2FMarkDown%E4%BD%BF%E7%94%A8%E7%A7%AF%E7%B4%AF%2F</url>
+    <content type="text"><![CDATA[格式 ​ 粗体、斜体、==高亮==、删除线、下划线、我是^上标^、我是下标、超链接 ​ ​ 无序列表 ​ 无序列表1 无序列表2​有序列表​ 有序列表 有序列表 任务列表 ​ 看电影 听音乐 语法快捷键 格式]]></content>
+      <tags>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[月隐]]></title>
+    <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A83-%E6%9C%88%E9%9A%90%2F</url>
+    <content type="text"><![CDATA[文 | 涵若生 日约黄昏后月 无心拉朵流云遮头 半隐娇羞 你好 无双]]></content>
+      <tags>
+        <tag>诗文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[原始]]></title>
     <url>%2F2019%2F08%2F25%2F%5B%E5%BF%83%E9%9B%A84-%E5%8E%9F%E5%A7%8B%2F</url>
     <content type="text"><![CDATA[文 | 涵若生 叫日的猎户下山了躲在洞穴里的生命开始躁动三五成群 结伴而行小心翼翼采集凉爽的风 晚安 无双]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[新的文章1]]></title>
-    <url>%2F2019%2F08%2F25%2F%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A01%2F</url>
-    <content type="text"><![CDATA[格式 ​ 粗体、斜体、==高亮==、删除线、下划线、我是^上标^、我是下标、超链接 ​ ​ 无序列表 ​ 无序列表1 无序列表2​有序列表​ 有序列表 有序列表 任务列表 ​ 看电影 听音乐 语法快捷键 格式]]></content>
+      <tags>
+        <tag>诗文</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F08%2F25%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[2017观看影视]]></title>
+    <url>%2F2017%2F09%2F25%2F%E8%A7%82%E5%BD%B1%E8%AE%B0%E5%BD%95%EF%BC%88%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[测试加密访问功能]]></content>
+      <categories>
+        <category>影音</category>
+        <category>影视</category>
+      </categories>
+      <tags>
+        <tag>影音</tag>
+        <tag>电影</tag>
+        <tag>电视剧</tag>
+        <tag>动画</tag>
+      </tags>
   </entry>
 </search>
