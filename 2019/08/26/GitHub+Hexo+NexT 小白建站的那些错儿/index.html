@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2019082614331125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hhbm9zbw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190826145059720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hhbm9zbw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2019082614420712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hhbm9zbw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-08-26T12:31:49.754Z">
+<meta property="og:updated_time" content="2019-08-26T16:14:25.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub+Hexo+NexT小白建站的那些错儿">
 <meta name="twitter:description" content="GitHub+Hexo+NexT 小白建站折腾的那些错儿👏 本文搜集了自己遇到的路过的听说的，有关GitHub+Hexo+NexT的建站问题，俗话说“好记性不如烂笔头”，这里就是烂笔头的集中地。👇 Issue1：Chrome提示“不安全的连接”（DNS设置）👉该问题请参考CSDN文章：Github Pages 启用 HTTPS Issue2：Chrome提示“not fully secure">
@@ -311,11 +311,19 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="创建时间：2019-08-26 20:17:44 / 修改时间：20:31:49" itemprop="dateCreated datePublished" datetime="2019-08-26T20:17:44+08:00">2019-08-26</time>
+              <time title="创建时间：2019-08-26 20:17:44" itemprop="dateCreated datePublished" datetime="2019-08-26T20:17:44+08:00">2019-08-26</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-27 00:14:25" itemprop="dateModified" datetime="2019-08-27T00:14:25+08:00">2019-08-27</time>
+              </span>
             
           
 
@@ -366,6 +374,7 @@ var _hmt = _hmt || [];
 <li>好像就这样解决了啊。。怪不怪。。。</li>
 </ul>
 <p><strong>Ps:</strong> <code>我为什么折腾上面两步？</code>因为我的Blog里用了<code>Valine</code>评论插件，而且也用LeanCloud管理，这个<code>hexo d</code>后立马就可以用了，LeanCloud管理也正常，然后我就对<code>Comment类</code>的的权限设置（前三个）进行调整，看看对评论功能有啥影响，发现<code>Create</code>设置为<code>指定用户</code>时，网站评论功能会提示<del>访问被api域名白名单拒绝</del>之类的（还有把<code>add_fields</code>改为指定用户后无法回复评论，提示相同），改为<code>所有用户</code>则可正常评论。又看了下<span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZG9jcy9lcnJvcl9jb2RlLmh0bWwjaGFzaDEzOTIxMDY=" title="https://leancloud.cn/docs/error_code.html#hash1392106">官方403建议<i class="fa fa-external-link"></i></span>。。啊啊，，，然后就对<code>Counter类</code>进行逐一改变权限设置的试验，看看网站文章浏览计数功能是不是正常了，==没想到就这样成了==<del>（好像是圣经里的一句话）</del>。。然后再按修复方法改回设置，仍然正常计数。。。==没想到就这样成了==<del>（好像是圣经里的一句话）</del> 哈哈</p>
+<h3 id="Issue6：Robots-txt误导：cannot-read-“useragent”"><a href="#Issue6：Robots-txt误导：cannot-read-“useragent”" class="headerlink" title="Issue6：Robots.txt误导：cannot read “useragent”"></a><span style="color:red">Issue6：</span>Robots.txt误导：cannot read “useragent”</h3><p>也是手贱，看到有几个文章说有自动生成robots.txt的命令：<code>npm install hexo-generator-robotstxt</code>，就搞了下，忽略那么多文章中没有用这个命令的，折腾一晚上，刚卸载它，<code>hexo g</code>就正常了。 啊啊啊啊，，<del>真理掌握在少数人手里</del>==群众的眼睛是雪亮的==</p>
 
     </div>
 
@@ -394,6 +403,22 @@ var _hmt = _hmt || [];
       </div>
 
   </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Hanoso</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tuanvoice.com/2019/08/26/GitHub+Hexo+NexT 小白建站的那些错儿/" title="GitHub+Hexo+NexT小白建站的那些错儿">https://tuanvoice.com/2019/08/26/GitHub+Hexo+NexT 小白建站的那些错儿/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
+</ul>
 </div>
 
       
@@ -474,7 +499,7 @@ var _hmt = _hmt || [];
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Hexo-NexT-小白建站折腾的那些错儿"><span class="nav-number">1.</span> <span class="nav-text">GitHub+Hexo+NexT 小白建站折腾的那些错儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue1：Chrome提示“不安全的连接”（DNS设置）"><span class="nav-number">1.1.</span> <span class="nav-text">Issue1：Chrome提示“不安全的连接”（DNS设置）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue2：Chrome提示“not-fully-secure”（https与http）"><span class="nav-number">1.2.</span> <span class="nav-text">Issue2：Chrome提示“not fully secure”（https与http）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue3：前端图片显示问题（https与http）"><span class="nav-number">1.3.</span> <span class="nav-text">Issue3：前端图片显示问题（https与http）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue4：LeanCloud错误‘Counter-not-initialized-See-more-at-console-err-msg-’"><span class="nav-number">1.4.</span> <span class="nav-text">Issue4：LeanCloud错误‘Counter not initialized! See more at console err msg.’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue5：LeanCloud设置后Counter类前端返回403错误"><span class="nav-number">1.5.</span> <span class="nav-text">Issue5：LeanCloud设置后Counter类前端返回403错误</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Hexo-NexT-小白建站折腾的那些错儿"><span class="nav-number">1.</span> <span class="nav-text">GitHub+Hexo+NexT 小白建站折腾的那些错儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue1：Chrome提示“不安全的连接”（DNS设置）"><span class="nav-number">1.1.</span> <span class="nav-text">Issue1：Chrome提示“不安全的连接”（DNS设置）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue2：Chrome提示“not-fully-secure”（https与http）"><span class="nav-number">1.2.</span> <span class="nav-text">Issue2：Chrome提示“not fully secure”（https与http）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue3：前端图片显示问题（https与http）"><span class="nav-number">1.3.</span> <span class="nav-text">Issue3：前端图片显示问题（https与http）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue4：LeanCloud错误‘Counter-not-initialized-See-more-at-console-err-msg-’"><span class="nav-number">1.4.</span> <span class="nav-text">Issue4：LeanCloud错误‘Counter not initialized! See more at console err msg.’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue5：LeanCloud设置后Counter类前端返回403错误"><span class="nav-number">1.5.</span> <span class="nav-text">Issue5：LeanCloud设置后Counter类前端返回403错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue6：Robots-txt误导：cannot-read-“useragent”"><span class="nav-number">1.6.</span> <span class="nav-text">Issue6：Robots.txt误导：cannot read “useragent”</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -513,6 +538,10 @@ var _hmt = _hmt || [];
       
       <div class="site-state-item site-state-tags">
         
+          
+            <a href="/tags/">
+          
+        
         
         
           
@@ -531,7 +560,7 @@ var _hmt = _hmt || [];
         
         <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
-        
+        </a>
       </div>
     
   </nav>

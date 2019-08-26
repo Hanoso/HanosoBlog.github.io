@@ -526,11 +526,19 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="创建时间：2019-08-26 20:17:44 / 修改时间：20:31:49" itemprop="dateCreated datePublished" datetime="2019-08-26T20:17:44+08:00">2019-08-26</time>
+              <time title="创建时间：2019-08-26 20:17:44" itemprop="dateCreated datePublished" datetime="2019-08-26T20:17:44+08:00">2019-08-26</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-27 00:14:25" itemprop="dateModified" datetime="2019-08-27T00:14:25+08:00">2019-08-27</time>
+              </span>
             
           
 
@@ -581,6 +589,7 @@ var _hmt = _hmt || [];
 <li>好像就这样解决了啊。。怪不怪。。。</li>
 </ul>
 <p><strong>Ps:</strong> <code>我为什么折腾上面两步？</code>因为我的Blog里用了<code>Valine</code>评论插件，而且也用LeanCloud管理，这个<code>hexo d</code>后立马就可以用了，LeanCloud管理也正常，然后我就对<code>Comment类</code>的的权限设置（前三个）进行调整，看看对评论功能有啥影响，发现<code>Create</code>设置为<code>指定用户</code>时，网站评论功能会提示<del>访问被api域名白名单拒绝</del>之类的（还有把<code>add_fields</code>改为指定用户后无法回复评论，提示相同），改为<code>所有用户</code>则可正常评论。又看了下<span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZG9jcy9lcnJvcl9jb2RlLmh0bWwjaGFzaDEzOTIxMDY=" title="https://leancloud.cn/docs/error_code.html#hash1392106">官方403建议<i class="fa fa-external-link"></i></span>。。啊啊，，，然后就对<code>Counter类</code>进行逐一改变权限设置的试验，看看网站文章浏览计数功能是不是正常了，==没想到就这样成了==<del>（好像是圣经里的一句话）</del>。。然后再按修复方法改回设置，仍然正常计数。。。==没想到就这样成了==<del>（好像是圣经里的一句话）</del> 哈哈</p>
+<h3 id="Issue6：Robots-txt误导：cannot-read-“useragent”"><a href="#Issue6：Robots-txt误导：cannot-read-“useragent”" class="headerlink" title="Issue6：Robots.txt误导：cannot read “useragent”"></a><span style="color:red">Issue6：</span>Robots.txt误导：cannot read “useragent”</h3><p>也是手贱，看到有几个文章说有自动生成robots.txt的命令：<code>npm install hexo-generator-robotstxt</code>，就搞了下，忽略那么多文章中没有用这个命令的，折腾一晚上，刚卸载它，<code>hexo g</code>就正常了。 啊啊啊啊，，<del>真理掌握在少数人手里</del>==群众的眼睛是雪亮的==</p>
 
         
       
@@ -881,6 +890,10 @@ var _hmt = _hmt || [];
       
       <div class="site-state-item site-state-tags">
         
+          
+            <a href="/tags/">
+          
+        
         
         
           
@@ -899,7 +912,7 @@ var _hmt = _hmt || [];
         
         <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
-        
+        </a>
       </div>
     
   </nav>
