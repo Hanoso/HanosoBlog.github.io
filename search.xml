@@ -5,7 +5,8 @@
     <url>%2F2019%2F08%2F26%2F1%2F</url>
     <content type="text"><![CDATA[GitHub+Hexo+NexT 小白建站折腾的那些错儿👏 本文搜集了自己遇到的路过的听说的，有关GitHub+Hexo+NexT的建站问题，俗话说“好记性不如烂笔头”，这里就是烂笔头的集中地。👇 Issue1：Chrome提示“不安全的连接”（DNS设置）【close】👉该问题请参考CSDN文章：Github Pages 启用 HTTPS Issue2：Chrome提示“not fully secure”（https与http）【close】 👉 ==暂未找到解决办法，该问题好像并不影响访问==，如果你有办法，麻烦留言或首页E-Mail我哦~Ps：这个问题一般是Issue1解决后出现的，主要原因应该是网站内的链接http和https混合出现导致的，所以又有了下一个问题Issue3 👇😭 Issue3：前端图片显示问题（https与http）【close】 👉==暂未找到解决办法== ，以后会统一放到七牛云上或其他图床上，暂时不管它了。如果你有办法，麻烦留言或首页E-Mail我哦~Ps: 我的站点在GitHub里设置了“Enforce Https”，可能与这个有关，但不想深究这个问题了，图床应该可以解决。 Issue4：LeanCloud错误‘Counter not initialized! See more at console err msg.’ 【close】👉该问题是在参考 LEAFERx 的漏洞修复文章进行设置后出现的，随后参考hexawater的文章解决：关于Hexo在NexT主题更新到6.0+之后出现的有关Leancloud的问题Ps：缩进啊，缩进，可是不知道哈。。参考代码如下： deploy: - type: git repository: git@github.com:Yourname/Yourname.github.io.git branch: master - type: leancloud_counter_security_syncIssue5：LeanCloud设置后Counter类前端返回403错误【close】 👉 ==暂未找到解决办法==，如果你有办法，麻烦留言或首页E-Mail我哦^两分钟前^👉两分钟后：==貌似正常了==。折腾过程如下： 在LeanCloud &gt; Counter类 &gt; 设置 Counter 的权限，将前三个的权限都改为“所有用户”或逐一改为所有用户（其他还是指定用户），刷新控制台，再刷新网站，看看是否显示，应该会正常显示； 害怕漏洞，然后再按LEAFERx的方法设置回去，刷新控制台，再刷新网站，阅读次数仍然正常显示，且数量会随着刷新增加。 好像就这样解决了啊。。怪不怪。。。 Ps: 我为什么折腾上面两步？因为我的Blog里用了Valine评论插件，而且也用LeanCloud管理，这个hexo d后立马就可以用了，LeanCloud管理也正常，然后我就对Comment类的的权限设置（前三个）进行调整，看看对评论功能有啥影响，发现Create设置为指定用户时，网站评论功能会提示访问被api域名白名单拒绝之类的（还有把add_fields改为指定用户后无法回复评论，提示相同），改为所有用户则可正常评论。又看了下官方403建议。。啊啊，，，然后就对Counter类进行逐一改变权限设置的试验，看看网站文章浏览计数功能是不是正常了，==没想到就这样成了==（好像是圣经里的一句话）。。然后再按修复方法改回设置，仍然正常计数。。。==没想到就这样成了==（好像是圣经里的一句话） 哈哈 Issue6：Robots.txt误导：cannot read “useragent”【close】也是手贱，看到有几个文章说有自动生成robots.txt的命令：npm install hexo-generator-robotstxt，就搞了下，忽略那么多文章中没有用这个命令的，折腾一晚上，刚卸载它，hexo g就正常了。 啊啊啊啊，，真理掌握在少数人手里==群众的眼睛是雪亮的== Issue7：版权声明设置【close】网上能搜到很多介绍，但方法基本一样，啰嗦。可能与next版本有关，我的V3.9版的在主题配置里改下设置就行，如下： creative_commons: license: by-nc-sa sidebar: true # 默认false，改为true后social link下出现版权图标 post: true # 默认false，改为true即显示版权信息 language:效果见文章底部。 Issue8：首页文章阴影（NextV3.9）【close】网上搜到的都是老代码，你会发现根本找不到_custom.styl这个文件，我F12了半天，找到了css源码位置\themes\next\source\css\_common\components\post\post.styl，定位到如下代码： .use-motion { if (hexo-config(&#39;motion.transition.post_block&#39;)) { .post-block, .pagination, .comments { opacity: 0; } }对==.post-block==单独增加代码： .use-motion { if (hexo-config(&#39;motion.transition.post_block&#39;)) { .post-block, .pagination, .comments { opacity: 0; } .post-block{ margin-top: 60px; margin-bottom: 60px; padding: 25px; -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5); -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5); } }你会发现首页文章已显示阴影。 啊啊啊啊，，==真理掌握在少数人手里== ，群众的眼睛是雪亮的 Issue9：SEO优化（百度403 Forbidden）【close】网上有很多seo的文章，指导怎么让百度收录抓取自己的站点，但没人说github把百度ban了，你再怎么优化，百度也鸟不到你了！没办法，人家写文章的建站早，那时候还没被ban吧，文章写完有几个回头再更新的啊。。哈哈。。废话完了。该问题的解决办法参考以下方法，还是有与时俱进的博主的哈！ 文章来源：语言 (这是网站名字，清奇）文章名称：百度无法爬取Github Pages静态网站解决方案 按以上方法暂未解决流量分发问题 谷歌site: tuanvoice.com，可以搜到，证明已收录。 百度虽然能抓取了，但site验证还是搜不到，估计要再等等。 Issue10：Chrome提示“Your connection is not private” 【close half】经试验，国内IP访问国外服务器地址时，谷歌浏览器会报此错，而百度简单搜索只提示证书过期但仍可继续访问。 国外IP访问国外服务器时谷歌不会报此错。但是，虽然hexo同时push到coding和GitHub，绑定的同一域名（阿里云）解析设置也分别对应默认和海外，但关掉vpn后访问网站谷歌仍然提示“您的连接不是私密连接”。 不带www的域名关掉和开着vpn都能正常访问了，原因应该是DNS解析设置的不对，尝试了很多种组合才成功。带www的域名，关掉VPN能正常访问，打开VPN则仍提示“不是私密连接”，这个不管了，有一个域名正常就行。 Issue11：同时部署到Coding和GitHub【close】网上搜到的大多已过时，还是coding.me的地址，已不能用，容易让小白误会，比如我，穷折腾好久。 GitHub的部署就不说了，一搜一个准。 Coding.net的部署之坑，填平如下： # Deployment ## Docs: https://hexo.io/docs/deployment.html deploy: - type: git repository: https://github.com/Hanoso/HanosoBlog.github.io.git branch: master - type: leancloud_counter_security_sync - type: git repository: https://e.coding.net/sea-north2south/HanosoBlog.git # coding.net branch: masterhexo站配置_config.yml中的deploy设置如上。其中coding.net地址获得路径为： &gt;&gt; 代码 &gt;&gt; 代码浏览 ：右上角HTTPS后的链接即使deploy中repository所需地址，直接点右侧复制按钮即可。 后续hexo d可同步部署到coding和GitHub上。此问题解决后，Issue9亦能得到解决，因为coding上有代码了啊。 Issue12：Coding自动部署 Webhook设置302问题【open】唯一疑惑的设置： url: https://e.coding.net/sea-north2south/HanosoBlog.git填写的仓库地址。但ping出来的是302，不知为何。]]></content>
       <categories>
-        <category>WEB</category>
+        <category>工具</category>
+        <category>烂笔头</category>
       </categories>
       <tags>
         <tag>建站</tag>
@@ -17,9 +18,10 @@
     <content type="text"><![CDATA[文 | 涵若生 我怀着微小的梦想去远方我带着无边的希望去流浪我穿着破旧的衣裳我背着空空的行囊我从沙漠走到海洋我站在矮矮的山岗 我看着雪山上的雏鹰飞翔我在森林中偶遇离群的幼象我从所有的眼睛中看到了泪光我也清晰地看见落入其中的画像我走过的路总是尘土飞扬我看到的人总是匆匆忙忙我路过小河里的木舟飘荡我踩着的木屐无忧无虑地歌唱我追随着风的方向我搜集了所有的风光我找寻着记忆中的脸庞我要把沉重的行囊交到她手上我会离开去尘世之外隐藏我应该会在晨曦中又念起故乡我应该会在月光中看见她的模样我入梦前的嘴角应该还挂着安详我如果还能醒来会将一切遗忘我的过去就让它于过去埋葬我做回婴儿再重来一场 早安 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《清晨木鱼》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -28,9 +30,10 @@
     <content type="text"><![CDATA[文 | 涵若生 飘零的落叶卷走了最亲近的人就在那个十一岁的秋天暮色昏沉 天高云淡灰色占据了所有空间眼睛看不见色彩耳朵听不见鸣弦心被锁在了某个瞬间 音符成了守护的栅栏躲在里面想挖开心田 埋葬思念冰封的土地难以下铲寒冷炙烤的汗珠 一滴一滴滴到三年后的春天思念的种子终于被埋下伤感也随着消融的河面渐渐流远春意正盎然归燕嬉戏于水面白云游玩于蓝天一阵粗暴的语言一卷狂乱的飞弦如疾风骤雨般清扫了灰色的时间彩色的自然乐曲的变换滋润出新的期愿十指变换 挥洒最美丽的画卷激荡沉缓 述说久违的爱恋你拨弄琴弦奏响的却是四月的谎言 早安 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《清晨木鱼》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -39,9 +42,10 @@
     <content type="text"><![CDATA[文 | 涵若生 最诚实的道路永远是直的弯一点就会绕远一里远啊一里险绕过来的你可能已改变我并不怀疑你初见时的情感只是走的太远 难免会被路边的野花羁绊也许那并不是你想要的答案可世事怎会那么轻易地让你如愿风云推着月亮转一会月半一会月圆就像心一样一会缺憾一会饱满所以我早已不是少年但仍保留着最初的爱恋只是连接你我的那条红线缠绕成了一个黑猫爪下的线团你在那头 我在这端除了玩地尽心的猫外我们彼此早已看不见猫是初见线团是谜而你我 也许就这样相隔永远因为那拆不散的线 早安 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《清晨木鱼》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -50,9 +54,10 @@
     <content type="text"><![CDATA[文 | 涵若生** 雨落天幕掩住 三生洞府怎渡猴子猴孙无数 早安 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《海北之南》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -61,9 +66,10 @@
     <content type="text"><![CDATA[文 | 涵若生 叫日的猎户下山了躲在洞穴里的生命开始躁动三五成群 结伴而行小心翼翼采集凉爽的风 晚安 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《海北之南》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -72,9 +78,10 @@
     <content type="text"><![CDATA[文 | 涵若生 日约黄昏后月 无心拉朵流云遮头 半隐娇羞 你好 无双]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《海北之南》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -95,9 +102,10 @@
     <content type="text"><![CDATA[文 | 涵若生 去也罢，留也罢，何侍一地繁华？天无涯，地无涯，何处不安家？]]></content>
       <categories>
         <category>诗文</category>
+        <category>诗歌</category>
       </categories>
       <tags>
-        <tag>《海北之南》</tag>
+        <tag>海北之南</tag>
       </tags>
   </entry>
   <entry>
@@ -111,21 +119,6 @@
       <tags>
         <tag>短小说</tag>
         <tag>科幻</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2017观看影视]]></title>
-    <url>%2F2017%2F09%2F25%2F%E8%A7%82%E5%BD%B1%E8%AE%B0%E5%BD%95%EF%BC%88%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[测试加密访问功能]]></content>
-      <categories>
-        <category>影音</category>
-        <category>影视</category>
-      </categories>
-      <tags>
-        <tag>影音</tag>
-        <tag>电影</tag>
-        <tag>电视剧</tag>
-        <tag>动画</tag>
       </tags>
   </entry>
 </search>
